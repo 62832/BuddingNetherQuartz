@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_certus_quartz_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dusts/nether_quartz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "buddingnetherquartz:ae2/silicon_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_certus_quartz_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "buddingnetherquartz:ae2/silicon_blasting"
+    ]
+  }
+}

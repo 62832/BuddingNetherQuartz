@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "buddingnetherquartz:block/flawless_budding_quartz"
+  }
+}

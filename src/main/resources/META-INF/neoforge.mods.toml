@@ -1,0 +1,21 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+
+issueTrackerURL = "https://github.com/62832/BuddingNetherQuartz/issues"
+displayURL = "https://curseforge.com/minecraft/mc-mods/budding-nether-quartz"
+authors = "90"
+license = "MIT"
+
+[[mods]]
+modId = "buddingnetherquartz"
+version = "$version"
+displayName = "Budding Nether Quartz"
+description = "Adds renewable amethyst-like versions of Nether Quartz."
+
+[[dependencies]]
+modId = "minecraft"
+versionRange = "[$mcVersion,)"
+
+[[dependencies]]
+modId = "ae2"
+type = "optional"
