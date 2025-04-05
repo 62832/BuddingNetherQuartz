@@ -22,15 +22,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v3
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           java-version: 21
           distribution: 'temurin'
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
       - name: Generate assets
         run: ./gradlew runData
       - name: Check that data was generated
@@ -43,7 +41,7 @@ jobs:
         run: ./gradlew build
       - name: Publish release files
         if: ${{ github.event_name == 'release' }}
-        uses: Kir-Antipov/mc-publish@995edadc13559a8b28d0b7e6571229f067ec7659
+        uses: Kir-Antipov/mc-publish@v3.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -53,6 +51,7 @@ jobs:
           modrinth-id: e94zTrZK
           modrinth-token: ${{ secrets.MODRINTH_API_KEY }}
 
+          game-versions: 1.21.1
           loaders: neoforge
           dependencies: |
             ae2(optional){curseforge:223794}{modrinth:XxWD5pD3}
